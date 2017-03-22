@@ -1,7 +1,7 @@
 import React from "react";
-import {Link, browserHistory} from "react-router";
-import {Accounts} from "meteor/accounts-base";
-import {Meteor} from 'meteor/meteor';
+import { Link, browserHistory } from "react-router";
+import { Accounts } from "meteor/accounts-base";
+import { Meteor } from 'meteor/meteor';
 
 export default class Login extends React.Component {
   constructor (props) {
@@ -21,8 +21,8 @@ export default class Login extends React.Component {
     Meteor.loginWithPassword(email, password, (err) => {
       if (!err) {
         console.log("Signed in:", email);
+        this.setState({ error: "" });
         browserHistory.push("/links");
-        // this.setState({ error: "" });
 
       } else {
         console.log(err);

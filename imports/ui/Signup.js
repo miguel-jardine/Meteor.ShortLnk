@@ -21,8 +21,8 @@ export default class Signup extends React.Component {
     Accounts.createUser({email, password}, (err) => {
       if (!err) {
         console.log("Account created:", email);
+        this.setState({ error: "" });
         browserHistory.push("/links");
-        // this.setState({ error: "" });
 
       } else {
         console.log(err);

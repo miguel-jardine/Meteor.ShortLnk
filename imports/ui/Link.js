@@ -1,6 +1,6 @@
 import React from "react";
-import {browserHistory} from "react-router";
-import {Meteor} from 'meteor/meteor';
+import { browserHistory } from "react-router";
+import { Meteor } from 'meteor/meteor';
 
 export default class Link extends React.Component {
     onLogout () {
